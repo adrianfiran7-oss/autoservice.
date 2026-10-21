@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoMaster Pro — Премиальный автосервис и технический центр</title>
+  <meta name="description" content="Профессиональный ремонт и обслуживание автомобилей всех марок. Честные цены, гарантия до 1 года, свой склад запчастей. Онлайн-калькулятор и запись.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header class="header" id="header">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 16H9m10 0h3v-3.15a1 1 0 0 0-.84-.99L16 11l-2.7-3.6a1 1 0 0 0-.8-.4H5.24a2 2 0 0 0-1.8 1.1l-.8 1.63A6 6 0 0 0 2 12.42V16h2"/>
+            <circle cx="6.5" cy="16.5" r="2.5"/>
+            <circle cx="16.5" cy="16.5" r="2.5"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">AutoMaster<span class="accent-dot">PRO</span></span>
+          <span class="logo-subtitle">Автотехцентр & Сервис</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#services" class="nav-link">Услуги</a>
+        <a href="#calculator" class="nav-link">Калькулятор</a>
+        <a href="#advantages" class="nav-link">Преимущества</a>
+        <a href="#brands" class="nav-link">Марки</a>
+        <a href="#reviews" class="nav-link">Отзывы</a>
+        <a href="#faq" class="nav-link">Вопросы</a>
+        <a href="#contacts" class="nav-link">Контакты</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="header-phone">
+          <a href="tel:+74951234567" class="phone-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <span>+7 (495) 123-45-67</span>
+          </a>
+          <span class="work-time">Пн-Вс: 08:00 — 21:00</span>
+        </div>
+
+        <button class="btn btn-primary open-modal-btn" data-service="Общая консультация и запись">
+          <span>Записаться</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14m-7-7 7 7-7 7"/>
+          </svg>
+        </button>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-glow"></div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse-indicator"></span>
+          Сертифицированный ремонт авто с гарантией 12 месяцев
+        </div>
+        <h1 class="hero-title">
+          Честный ремонт и ТО <br>
+          <span class="gradient-text">вашего автомобиля</span> без лишних наценок
+        </h1>
+        <p class="hero-desc">
+          Проводим компьютерную диагностику за 30 минут, согласуем смету до начала работ и пускаем в ремонтную зону. Собственный склад запчастей — ремонт без ожидания.
+        </p>
+
+        <div class="hero-cta-group">
+          <button class="btn btn-primary btn-lg open-modal-btn" data-service="Диагностика по 42 пунктам">
+            <span>Записаться на диагностику</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14m-7-7 7 7-7 7"/>
+            </svg>
+          </button>
+          <a href="#calculator" class="btn btn-outline btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="2" width="16" height="20" rx="2"/>
+              <line x1="8" y1="6" x2="16" y2="6"/>
+              <line x1="16" y1="14" x2="16" y2="18"/>
+              <path d="M16 10h.01M12 10h.01M8 10h.01M12 14h.01M8 14h.01M12 18h.01M8 18h.01"/>
+            </svg>
+            <span>Рассчитать стоимость</span>
+          </a>
+        </div>
+
+        <div class="hero-metrics">
+          <div class="metric-card">
+            <div class="metric-val">12+</div>
+            <div class="metric-label">лет опыта мастеров</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-val">15 000+</div>
+            <div class="metric-label">обслуженных авто</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-val">1 год</div>
+            <div class="metric-label">гарантия на работы</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-val">4.9 ★</div>
+            <div class="metric-label">рейтинг Яндекс и 2ГИС</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card-wrap">
+        <div class="quick-booking-card">
+          <div class="card-header">
+            <h3>Быстрая онлайн-запись</h3>
+            <p>Перезвоним в течение 5 минут и забронируем удобное время</p>
+          </div>
+          <form class="quick-form" id="quickHeroForm">
+            <div class="input-group">
+              <label for="heroName">Ваше имя</label>
+              <input type="text" id="heroName" placeholder="Например, Александр" required>
+            </div>
+            <div class="input-group">
+              <label for="heroPhone">Номер телефона</label>
+              <input type="tel" id="heroPhone" placeholder="+7 (___) ___-__-__" required>
+            </div>
+            <div class="input-group">
+              <label for="heroCar">Марка и модель авто</label>
+              <input type="text" id="heroCar" placeholder="Например, Skoda Octavia 2018" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+              <span>Забронировать время со скидкой 10%</span>
+            </button>
+            <p class="form-disclaimer">
+              Нажимая кнопку, вы соглашаетесь на обработку персональных данных.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Special Offer Ribbon -->
+  <section class="banner-section">
+    <div class="container">
+      <div class="offer-banner">
+        <div class="offer-tag">АКЦИЯ МЕСЯЦА</div>
+        <div class="offer-info">
+          <h4>Комплексная диагностика по 42 параметрам всего за <span class="accent-price">990 ₽</span> вместо <del>2 500 ₽</del></h4>
+          <p>При ремонте в день обращения диагностика — <strong>БЕСПЛАТНО!</strong></p>
+        </div>
+        <button class="btn btn-accent open-modal-btn" data-service="Комплексная диагностика (Акция 990 руб)">
+          Воспользоваться акцией
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services section-padding" id="services">
+    <div class="container">
+      <div class="section-head text-center">
+        <span class="section-tag">ЧЕМ МЫ МОЖЕМ ПОМОЧЬ</span>
+        <h2 class="section-title">Популярные услуги и прозрачные цены</h2>
+        <p class="section-subtitle">Работаем со всеми марками авто. Окончательная смета фиксируется до старта работ.</p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="service-tabs">
+        <button class="tab-btn active" data-filter="all">Все услуги</button>
+        <button class="tab-btn" data-filter="maintenance">ТО и расходники</button>
+        <button class="tab-btn" data-filter="chassis">Ходовая и тормоза</button>
+        <button class="tab-btn" data-filter="engine">Двигатель и КПП</button>
+        <button class="tab-btn" data-filter="electric">Диагностика и электрика</button>
+      </div>
+
+      <div class="services-grid" id="servicesGrid">
+        <!-- Service Card 1 -->
+        <div class="service-card" data-category="electric">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <div class="service-content">
+            <div class="service-top">
+              <span class="badge">Экспресс</span>
+              <span class="service-price">от 990 ₽</span>
+            </div>
+            <h3>Компьютерная диагностика</h3>
+            <p>Чтение всех блоков управления дилерскими сканерами, выявление скрытых неисправностей, сброс ошибок.</p>
+            <ul class="service-specs">
+              <li>Время: 30 минут</li>
+              <li>Сканирование ДВС, АКПП, ABS, подушек</li>
+              <li>Печатный отчет и рекомендации мастера</li>
+            </ul>
+          </div>
+          <button class="btn btn-outline btn-sm open-modal-btn" data-service="Компьютерная диагностика">Записаться</button>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="service-card" data-category="maintenance">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20m10-10H2"/><circle cx="12" cy="12" r="8"/></svg>
+          </div>
+          <div class="service-content">
+            <div class="service-top">
+              <span class="badge">Популярно</span>
+              <span class="service-price">от 1 200 ₽</span>
+            </div>
+            <h3>Техническое обслуживание (ТО)</h3>
+            <p>Замена моторного масла, масляного, салонного и воздушного фильтров, осмотр ходовой части.</p>
+            <ul class="service-specs">
+              <li>Время: от 40 минут</li>
+              <li>Оригинальные фильтры и масла Shell, Motul, Mobil</li>
+              <li>Снятие/установка защиты ДВС</li>
+            </ul>
+          </div>
+          <button class="btn btn-outline btn-sm open-modal-btn" data-service="Плановое ТО">Записаться</button>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="service-card" data-category="chassis">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24m5.66 5.66 4.24 4.24m-14.14 0 4.24-4.24m5.66-5.66 4.24-4.24"/></svg>
+          </div>
+          <div class="service-content">
+            <div class="service-top">
+              <span class="badge">Безопасность</span>
+              <span class="service-price">от 1 500 ₽</span>
+            </div>
+            <h3>Тормозная система</h3>
+            <p>Замена тормозных колодок и дисков, прокачка тормозной жидкости, ревизия суппортов и смазка направляющих.</p>
+            <ul class="service-specs">
+              <li>Время: от 45 минут</li>
+              <li>Проверка биения дисков</li>
+              <li>Контроль состояния тормозных шлангов</li>
+            </ul>
+          </div>
+          <button class="btn btn-outline btn-sm open-modal-btn" data-service="Ремонт тормозной системы">Записаться</button>
+        </div>
+
+        <!-- Service Card 4 -->
+        <div class="service-card" data-category="chassis">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+          </div>
+          <div class="service-content">
+            <div class="service-top">
+              <span class="badge">Комфорт</span>
+              <span class="service-price">от 1 800 ₽</span>
+            </div>
+            <h3>Ремонт подвески и ходовой</h3>
+            <p>Устранение стуков, замена сайлентблоков, рычагов, амортизаторов, шаровых опор и стоек стабилизатора.</p>
+            <ul class="service-specs">
+              <li>Вибростенд и люфт-детектор</li>
+              <li>Протяжка узлов динамометрическим ключом</li>
+              <li>Сход-развал 3D на современном стенде</li>
+            </ul>
+          </div>
+          <button class="btn btn-outline btn-sm open-modal-btn" data-service="Ремонт подвески">Записаться</button>
+        </div>
+
+        <!-- Service Card 5 -->
+        <div class="service-card" data-category="engine">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h10M7 12h10M7 16h6"/></svg>
+          </div>
+          <div class="service-content">
+            <div class="service-top">
+              <span class="badge">Сложный ремонт</span>
+              <span class="service-price">от 3 500 ₽</span>
+            </div>
+            <h3>Ремонт двигателя и ГРМ</h3>
+            <p>Замена ремней и цепей ГРМ, маслосъемных колпачков, прокладок ГБЦ, устранение течей, капитальный ремонт ДВС.</p>
+            <ul class="service-specs">
+              <li>Гарантия на моторные работы до 1 года</li>
+              <li>Эндоскопия цилиндров перед разборкой</li>
+              <li>Точные моменты затяжки по мануалам производителя</li>
+            </ul>
+          </div>
+          <button class="btn btn-outline btn-sm open-modal-btn" data-service="Ремонт ДВС / ГРМ">Записаться</button>
+        </div>
+
+        <!-- Service Card 6 -->
+        <div class="service-card" data-category="maintenance">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div class="service-content">
+            <div class="service-top">
+              <span class="badge">Сезонное</span>
+              <span class="service-price">от 2 400 ₽</span>
+            </div>
+            <h3>Шиномонтаж и балансировка</h3>
+            <p>Сезонная переобувка колес от R13 до R24, высокоточная лазерная балансировка, ремонт проколов и боковых порезов.</p>
+            <ul class="service-specs">
+              <li>Итальянские станки без царапин дисков</li>
+              <li>Сезонное хранение резины в сухом боксе</li>
+              <li>Протяжка колесных болтов с контролем усилия</li>
+            </ul>
+          </div>
+          <button class="btn btn-outline btn-sm open-modal-btn" data-service="Шиномонтаж">Записаться</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Cost Calculator -->
+  <section class="calculator-section section-padding" id="calculator">
+    <div class="container">
+      <div class="section-head text-center">
+        <span class="section-tag">ПРОЗРАЧНЫЙ РАСЧЕТ</span>
+        <h2 class="section-title">Калькулятор стоимости работ</h2>
+        <p class="section-subtitle">Выберите параметры вашего автомобиля и необходимые услуги для предварительного расчета.</p>
+      </div>
+
+      <div class="calculator-box">
+        <div class="calc-steps">
+          <!-- Step 1: Car Type -->
+          <div class="calc-step">
+            <div class="step-label"><span class="step-num">1</span> Выберите класс авто</div>
+            <div class="car-types-grid" id="carTypesGrid">
+              <label class="car-type-card active">
+                <input type="radio" name="carType" value="sedan" data-multiplier="1" checked>
+                <div class="car-type-icon">🚗</div>
+                <div class="car-type-name">Легковой / Седан</div>
+                <div class="car-type-desc">B, C, D класс</div>
+              </label>
+
+              <label class="car-type-card">
+                <input type="radio" name="carType" value="crossover" data-multiplier="1.15">
+                <div class="car-type-icon">🚙</div>
+                <div class="car-type-name">Кроссовер</div>
+                <div class="car-type-desc">Компактные и средние SUV</div>
+              </label>
+
+              <label class="car-type-card">
+                <input type="radio" name="carType" value="suv" data-multiplier="1.3">
+                <div class="car-type-icon">🛻</div>
+                <div class="car-type-name">Внедорожник / Пикап</div>
+                <div class="car-type-desc">Рамные джипы, полноразмерные SUV</div>
+              </label>
+
+              <label class="car-type-card">
+                <input type="radio" name="carType" value="commercial" data-multiplier="1.35">
+                <div class="car-type-icon">🚐</div>
+                <div class="car-type-name">Коммерческий</div>
+                <div class="car-type-desc">Микроавтобусы, Gazelle, Porter</div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Step 2: Choose Services -->
+          <div class="calc-step">
+            <div class="step-label"><span class="step-num">2</span> Выберите услуги (можно несколько)</div>
+            <div class="calc-services-list" id="calcServicesList">
+              <label class="calc-checkbox-card">
+                <input type="checkbox" class="calc-service-cb" data-price="990" checked>
+                <div class="cb-checkmark"></div>
+                <div class="cb-info">
+                  <span class="cb-title">Компьютерная диагностика систем</span>
+                  <span class="cb-note">Считывание кодов ошибок сканером</span>
+                </div>
+                <span class="cb-price">990 ₽</span>
+              </label>
+
+              <label class="calc-checkbox-card">
+                <input type="checkbox" class="calc-service-cb" data-price="1200" checked>
+                <div class="cb-checkmark"></div>
+                <div class="cb-info">
+                  <span class="cb-title">Замена масла ДВС и фильтра</span>
+                  <span class="cb-note">Включает снятие/установку защиты картера</span>
+                </div>
+                <span class="cb-price">1 200 ₽</span>
+              </label>
+
+              <label class="calc-checkbox-card">
+                <input type="checkbox" class="calc-service-cb" data-price="1500">
+                <div class="cb-checkmark"></div>
+                <div class="cb-info">
+                  <span class="cb-title">Замена передних тормозных колодок</span>
+                  <span class="cb-note">Очистка и смазка направляющих суппорта</span>
+                </div>
+                <span class="cb-price">1 500 ₽</span>
+              </label>
+
+              <label class="calc-checkbox-card">
+                <input type="checkbox" class="calc-service-cb" data-price="1600">
+                <div class="cb-checkmark"></div>
+                <div class="cb-info">
+                  <span class="cb-title">Замена воздушного и салонного фильтров</span>
+                  <span class="cb-note">Очистка корпуса фильтра</span>
+                </div>
+                <span class="cb-price">800 ₽</span>
+              </label>
+
+              <label class="calc-checkbox-card">
+                <input type="checkbox" class="calc-service-cb" data-price="2500">
+                <div class="cb-checkmark"></div>
+                <div class="cb-info">
+                  <span class="cb-title">Диагностика ходовой части на подъемнике</span>
+                  <span class="cb-note">Осмотр рычагов, сайлентблоков, амортизаторов</span>
+                </div>
+                <span class="cb-price">1 000 ₽</span>
+              </label>
+
+              <label class="calc-checkbox-card">
+                <input type="checkbox" class="calc-service-cb" data-price="2600">
+                <div class="cb-checkmark"></div>
+                <div class="cb-info">
+                  <span class="cb-title">Сход-развал 3D (2 оси)</span>
+                  <span class="cb-note">Высокоточная юстировка на лазерном стенде</span>
+                </div>
+                <span class="cb-price">2 600 ₽</span>
+              </label>
+
+              <label class="calc-checkbox-card">
+                <input type="checkbox" class="calc-service-cb" data-price="2200">
+                <div class="cb-checkmark"></div>
+                <div class="cb-info">
+                  <span class="cb-title">Заправка кондиционера фреоном + антисептик</span>
+                  <span class="cb-note">Вакуумирование и проверка герметичности</span>
+                </div>
+                <span class="cb-price">2 200 ₽</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Summary column -->
+        <div class="calc-total-card">
+          <div class="total-header">
+            <h4>Итоговая смета</h4>
+            <span class="calc-discount-badge">-10% при записи онлайн</span>
+          </div>
+
+          <div class="calc-breakdown">
+            <div class="breakdown-row">
+              <span>Выбрано позиций:</span>
+              <strong id="calcItemsCount">2 услуги</strong>
+            </div>
+            <div class="breakdown-row">
+              <span>Базовая стоимость:</span>
+              <strong id="calcBasePrice">2 190 ₽</strong>
+            </div>
+            <div class="breakdown-row discount-row">
+              <span>Скидка за онлайн-запись (10%):</span>
+              <strong id="calcDiscount">-219 ₽</strong>
+            </div>
+            <div class="divider"></div>
+            <div class="total-price-box">
+              <span class="total-title">Примерная цена:</span>
+              <div class="price-val" id="calcFinalPrice">1 971 ₽</div>
+            </div>
+          </div>
+
+          <div class="calc-guarantee-note">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Цена фиксируется в заказ-наряде и не увеличится без вашего согласия.</span>
+          </div>
+
+          <button class="btn btn-primary btn-block open-modal-btn" id="calcOrderBtn" data-service="Калькулятор (Расчет с сайта)">
+            Зафиксировать скидку и записаться
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advantages Section -->
+  <section class="advantages section-padding" id="advantages">
+    <div class="container">
+      <div class="section-head text-center">
+        <span class="section-tag">ПОЧЕМУ НАС ВЫБИРАЮТ</span>
+        <h2 class="section-title">Автосервис, которому действительно доверяют</h2>
+        <p class="section-subtitle">Работаем открыто: без навязанных услуг, с понятной сметой и видеонаблюдением в клиентской зоне.</p>
+      </div>
+
+      <div class="advantages-grid">
+        <div class="adv-card">
+          <div class="adv-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Честная гарантия 12 месяцев</h3>
+          <p>Даем официальную гарантию на все выполненные работы до 1 года или 20 000 км пробега. Если что-то не так — исправим бесплатно.</p>
+        </div>
+
+        <div class="adv-card">
+          <div class="adv-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h3>Свой склад запчастей</h3>
+          <p>Более 8 000 наименований оригиналов и качественных аналогов в наличии. Экспресс-доставка редких деталей от 30 минут.</p>
+        </div>
+
+        <div class="adv-card">
+          <div class="adv-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3>Открытая ремонтная зона</h3>
+          <p>Вы можете лично наблюдать за ремонтом авто в ремзоне или смотреть онлайн-трансляцию на экране в комфортной комнате ожидания с кофе и Wi-Fi.</p>
+        </div>
+
+        <div class="adv-card">
+          <div class="adv-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+          </div>
+          <h3>Согласование каждого рубля</h3>
+          <p>Никаких сюрпризов при выдаче машины: перед началом работ мастер детально объясняет стоимость и целесообразность каждого действия.</p>
+        </div>
+
+        <div class="adv-card">
+          <div class="adv-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Мастера с опытом от 7 лет</h3>
+          <p>Специалисты регулярно проходят сертификацию у автопроизводителей и работают на дилерском специнструменте.</p>
+        </div>
+
+        <div class="adv-card">
+          <div class="adv-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Точные сроки выдачи</h3>
+          <p>Четко фиксируем время готовности машины. Если опоздаем хотя бы на 30 минут — следующая замена масла за наш счет.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Supported Brands -->
+  <section class="brands-section section-padding" id="brands">
+    <div class="container">
+      <div class="section-head text-center">
+        <span class="section-tag">МАРКИ АВТОМОБИЛЕЙ</span>
+        <h2 class="section-title">Обслуживаем популярные европейские, азиатские и отечественные марки</h2>
+        <p class="section-subtitle">Диагностические базы данных обновлены до моделей текущего года.</p>
+      </div>
+
+      <div class="brands-grid">
+        <div class="brand-item"><span>BMW</span></div>
+        <div class="brand-item"><span>Mercedes-Benz</span></div>
+        <div class="brand-item"><span>Audi</span></div>
+        <div class="brand-item"><span>Volkswagen</span></div>
+        <div class="brand-item"><span>Skoda</span></div>
+        <div class="brand-item"><span>Toyota</span></div>
+        <div class="brand-item"><span>Lexus</span></div>
+        <div class="brand-item"><span>Kia</span></div>
+        <div class="brand-item"><span>Hyundai</span></div>
+        <div class="brand-item"><span>Nissan</span></div>
+        <div class="brand-item"><span>Mazda</span></div>
+        <div class="brand-item"><span>Volvo</span></div>
+        <div class="brand-item"><span>Geely</span></div>
+        <div class="brand-item"><span>Chery / Exeed</span></div>
+        <div class="brand-item"><span>Haval</span></div>
+        <div class="brand-item"><span>Lada (ВАЗ)</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Reviews -->
+  <section class="reviews section-padding" id="reviews">
+    <div class="container">
+      <div class="section-head text-center">
+        <span class="section-tag">ОТЗЫВЫ АВТОВЛАДЕЛЬЦЕВ</span>
+        <h2 class="section-title">Что говорят наши постоянные клиенты</h2>
+        <div class="rating-badge-center">
+          <span class="rating-stars">★★★★★</span>
+          <strong>4.9 из 5</strong> на основе более 420 отзывов на Яндекс.Картах
+        </div>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-header">
+            <div class="client-avatar">ДМ</div>
+            <div class="client-info">
+              <h4>Дмитрий Морозов</h4>
+              <span class="client-car">Toyota Camry VII (XV50)</span>
+            </div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+          <p class="review-text">
+            «Приезжал на диагностику подвески из-за странного глухого стука справа. В двух сервисах приговаривали стойку в сборе. Здесь мастер Алексей нашел разболтавшуюся стойку стабилизатора, поменяли за 40 минут. Честно, без развода на дорогие детали! Теперь только к вам.»
+          </p>
+          <div class="review-date">14 октября 2026 • Яндекс.Карты</div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="client-avatar">ЕК</div>
+            <div class="client-info">
+              <h4>Елена Ковалева</h4>
+              <span class="client-car">Kia Sportage 2.0</span>
+            </div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+          <p class="review-text">
+            «Делала большое ТО на 90 тыс. км: масло, все фильтры, свечи и тормозную жидкость. Понравилось, что в клиентской зоне чистый диван, хороший кофе и на большом мониторе видно мою машину в боксе. Цены адекватные, старые запчасти сложили в багажник в коробках.»
+          </p>
+          <div class="review-date">8 октября 2026 • 2ГИС</div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="client-avatar">АС</div>
+            <div class="client-info">
+              <h4>Артем Селезнев</h4>
+              <span class="client-car">BMW 320d (F30)</span>
+            </div>
+            <div class="review-stars">★★★★★</div>
+          </div>
+          <p class="review-text">
+            «Менял цепь ГРМ и демпфер коленвала. Работа очень ответственная. Мастера отлично разбираются в моторах N47/B47, спецфиксаторы в наличии. Сделали за рабочий день, завели — шепчет. Гарантийный талон выдали с печатью. Рекомендую!»
+          </p>
+          <div class="review-date">28 сентября 2026 • Google Reviews</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq section-padding" id="faq">
+    <div class="container faq-container">
+      <div class="section-head text-center">
+        <span class="section-tag">ОТВЕТЫ НА ВОПРОСЫ</span>
+        <h2 class="section-title">Часто задаваемые вопросы</h2>
+        <p class="section-subtitle">Если не нашли ответ на свой вопрос, оставьте заявку — наш мастер проконсультирует бесплатно.</p>
+      </div>
+
+      <div class="accordion" id="faqAccordion">
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span>Можно ли находиться в ремонтной зоне во время работы?</span>
+            <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Да, абсолютно! Мы придерживаемся политики открытости. После короткого инструктажа по технике безопасности вы можете находиться возле своего автомобиля и наблюдать за ходом всех работ, либо расположиться в комфортной комнате ожидания с видеотрансляцией.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Можно ли приехать со своими запчастями и расходниками?</span>
+            <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Да, вы можете привезти свои запчасти. В таком случае гарантия автосервиса распространяется на корректность выполнения работ (12 месяцев). Также на нашем складе есть проверенные оригиналы и надежные дубликаты по оптовым ценам с полной гарантией на запчасть и работу.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Как формируется и фиксируется окончательная стоимость?</span>
+            <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Мастер-приемщик проводит первичный осмотр или диагностику, составляет заказ-наряд с перечнем всех работ и стоимостью запчастей. Работы начинаются только после вашего утверждения сметы. Никаких «неожиданных» сумм при расчете у нас не бывает.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Какие способы оплаты вы принимаете?</span>
+            <svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Мы принимаем оплату наличными, банковскими картами через терминал, по QR-коду (СБП), а также работаем с юридическими лицами по безналичному расчету с предоставлением полного пакета закрывающих бухгалтерских документов (с НДС и без).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacts & Map Section -->
+  <section class="contacts section-padding" id="contacts">
+    <div class="container">
+      <div class="contacts-wrapper">
+        <div class="contacts-info">
+          <span class="section-tag">КОНТАКТЫ & ГРАФИК</span>
+          <h2 class="contacts-title">Ждем вас в нашем автосервисе</h2>
+          <p class="contacts-subtitle">Удобный заезд с магистрали, просторная клиентская парковка и приветливые мастера.</p>
+
+          <div class="contact-items">
+            <div class="c-item">
+              <div class="c-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="c-text">
+                <div class="c-label">Адрес техцентра:</div>
+                <div class="c-val">г. Москва, ул. Автозаводская, д. 23, корп. 2</div>
+                <span class="c-hint">5 минут от ТТК, бесплатный въезд по шлагбауму</span>
+              </div>
+            </div>
+
+            <div class="c-item">
+              <div class="c-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="c-text">
+                <div class="c-label">Телефон и мессенджеры:</div>
+                <div class="c-val"><a href="tel:+74951234567">+7 (495) 123-45-67</a></div>
+                <div class="messengers">
+                  <a href="#" class="messenger-tag wa">WhatsApp</a>
+                  <a href="#" class="messenger-tag tg">Telegram</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="c-item">
+              <div class="c-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="c-text">
+                <div class="c-label">Режим работы:</div>
+                <div class="c-val">Понедельник — Воскресенье: 08:00 — 21:00</div>
+                <span class="c-hint">Без выходных и перерывов на обед</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-placeholder-box">
+          <div class="map-mockup">
+            <div class="map-pin">
+              <div class="pin-pulse"></div>
+              <div class="pin-dot">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/></svg>
+              </div>
+              <div class="pin-popup">
+                <strong>AutoMaster PRO</strong>
+                <span>ул. Автозаводская, 23к2</span>
+                <span class="open-status">● Сейчас открыто</span>
+              </div>
+            </div>
+            <div class="map-overlay-info">
+              <span>Интерактивная карта Яндекс / 2ГИС</span>
+              <a href="https://maps.yandex.ru" target="_blank" rel="noopener" class="btn btn-sm btn-outline">Построить маршрут</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col">
+          <div class="logo">
+            <div class="logo-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 16H9m10 0h3v-3.15a1 1 0 0 0-.84-.99L16 11l-2.7-3.6a1 1 0 0 0-.8-.4H5.24a2 2 0 0 0-1.8 1.1l-.8 1.63A6 6 0 0 0 2 12.42V16h2"/><circle cx="6.5" cy="16.5" r="2.5"/><circle cx="16.5" cy="16.5" r="2.5"/></svg>
+            </div>
+            <span class="logo-title">AutoMaster<span class="accent-dot">PRO</span></span>
+          </div>
+          <p class="footer-about">
+            Специализированный автосервис европейских, японских, корейских и китайских автомобилей в Москве. Профессиональный ремонт с честной гарантией.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Услуги</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Компьютерная диагностика</a></li>
+            <li><a href="#services">Техническое обслуживание (ТО)</a></li>
+            <li><a href="#services">Ремонт тормозной системы</a></li>
+            <li><a href="#services">Ремонт подвески и ходовой</a></li>
+            <li><a href="#services">Капитальный ремонт ДВС</a></li>
+            <li><a href="#services">Шиномонтаж и сход-развал</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Информация</h4>
+          <ul class="footer-links">
+            <li><a href="#advantages">О компании</a></li>
+            <li><a href="#calculator">Калькулятор ремонта</a></li>
+            <li><a href="#reviews">Отзывы клиентов</a></li>
+            <li><a href="#faq">Вопросы и ответы</a></li>
+            <li><a href="#contacts">Контакты и схема проезда</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Связь с нами</h4>
+          <p class="footer-phone"><a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+          <p class="footer-email">info@automaster-pro.ru</p>
+          <p class="footer-address">Москва, ул. Автозаводская, 23, к. 2</p>
+          <button class="btn btn-accent btn-sm open-modal-btn mt-3" data-service="Заказ обратного звонка">Заказать звонок</button>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 AutoMaster PRO. Все права защищены.</p>
+        <div class="footer-legal">
+          <a href="#">Политика конфиденциальности</a>
+          <a href="#">Пользовательское соглашение</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Booking Window -->
+  <div class="modal-overlay" id="bookingModal">
+    <div class="modal-window">
+      <button class="modal-close" id="modalClose" aria-label="Закрыть окно">&times;</button>
+      <div class="modal-header">
+        <div class="modal-tag">ОНЛАЙН-ЗАПИСЬ</div>
+        <h3 id="modalTitle">Запись на обслуживание</h3>
+        <p id="modalSubtitle">Оставьте контактные данные — мастер перезвонит для подтверждения времени и расчета стоимости.</p>
+      </div>
+
+      <form class="modal-form" id="bookingForm">
+        <input type="hidden" id="selectedServiceInput" value="Общая запись">
+
+        <div class="form-row">
+          <div class="input-group">
+            <label for="clientName">Ваше имя *</label>
+            <input type="text" id="clientName" placeholder="Иван" required>
+          </div>
+          <div class="input-group">
+            <label for="clientPhone">Телефон *</label>
+            <input type="tel" id="clientPhone" placeholder="+7 (999) 000-00-00" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="input-group">
+            <label for="carBrand">Марка и модель авто *</label>
+            <input type="text" id="carBrand" placeholder="Например: Audi A4 2017" required>
+          </div>
+          <div class="input-group">
+            <label for="bookingDate">Желаемая дата визита</label>
+            <input type="date" id="bookingDate">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label for="serviceComment">Выбранная услуга или описание проблемы</label>
+          <textarea id="serviceComment" rows="3" placeholder="Опишите симптомы (стук, скрип, замена колодок и т.д.)"></textarea>
+        </div>
+
+        <div class="modal-bonus">
+          <span class="bonus-icon">🎁</span>
+          <span>При первой записи через сайт — бесплатная диагностика подвески и скидка 10% на работы!</span>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-lg">
+          <span>Подтвердить запись со скидкой</span>
+        </button>
+
+        <p class="modal-disclaimer">
+          🔒 Ваши данные в безопасности и не передаются третьим лицам.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toastNotification">
+    <div class="toast-icon">✓</div>
+    <div class="toast-body">
+      <strong id="toastTitle">Заявка успешно отправлена!</strong>
+      <p id="toastMessage">Мастер свяжется с вами в течение 5 минут.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
